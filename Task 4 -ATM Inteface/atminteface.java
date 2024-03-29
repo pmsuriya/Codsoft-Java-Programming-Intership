@@ -3,7 +3,9 @@ import java.util.Scanner;
 class BankAccount {
     private double balance;
 
-    public BankAccount(double initialBalance) {
+   
+
+    public  BankAccount(double initialBalance) {
         this.balance = initialBalance;
     }
 
@@ -26,10 +28,10 @@ class BankAccount {
     }
 }
 
-public class ATM {
+public class atminterface {
     private BankAccount bankAccount;
 
-    public ATM(BankAccount bankAccount) {
+    public atminterface(BankAccount bankAccount) {
         this.bankAccount = bankAccount;
     }
 
@@ -72,9 +74,8 @@ public class ATM {
 
     public static void main(String[] args) {
         BankAccount account = new BankAccount(1000.0);
-        ATM atm = new ATM(account);
+        atminterface atm = new atminterface(account);
         Scanner scanner = new Scanner(System.in);
-
         int option;
         do {
             atm.displayMenu();
